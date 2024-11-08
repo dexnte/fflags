@@ -1,9 +1,10 @@
-<h1 align="center"><img src="https://github.com/pizzaboxer/bloxstrap/raw/main/Images/Bloxstrap.png" width="28"/> Ultimate FastFlags List</h1>
+<!-- Hello World -->
 
-<h3 align="center">https://discord.gg/YreqZ7aYmg</h3>
 
-#### Version: 1.0.1.2++ [4/25/2024]
-* **143 Currently Listed**
+#### Version: 5.14.24++
+* **153 Currently Listed**
+* **Community Presets**
+* **Textures currently don't work because "FFlagMSRefactor5" was removed, Roblox always removes the useful features instead of harmful stuff.**
 
 ## Bloxstrap How to Use:
 1. **Open the [Bloxstrap Menu](https://github.com/pizzaboxer/bloxstrap).**
@@ -13,9 +14,8 @@
 
 <img src="/assets/tutorial.gif" width="750"/>
 
-[Watch a Video Tutorial](https://www.youtube.com/watch?v=d7jzGM5kYO4)
 
-## Normal Roblox Bootstrapper  How to Use:
+## Normal Roblox Bootstrapper How to Use:
 ###### You can also do Roblox Studio
 1. **Navigate to your Roblox Installation directory. Typically found at `%localappdata%\Roblox\Versions\` for Windows or `C:\Program Files (x86)\Roblox\Versions`.**
 2. **Identify the folder `version-xxxxxxxxxxxxxxxx` ~~containing `RobloxPlayerBeta.exe`~~ You can do this for Roblox Studio too.**
@@ -24,21 +24,38 @@
 5. **Save and your good to go!**
 ###### Do note that after roblox updates you have to paste in your fflags again.
 
+## How to Use _PlaceFilter
+1. **Add `_PlaceFilter` after the Fast Flag name.**
+2. **Add a semicolon after the Value (`;`). Examples: `True;`, `1;`.**
+3. **Include a Place ID after the semicolon. Examples: `True;4483381587`, `1;4483381587`.**
+4. **Your configuration is complete!**
+
+[Watch a Video Tutorial](https://www.youtube.com/watch?v=5XjhPF5ydJM)
+
 [Watch a Video Tutorial](https://streamable.com/rk5an6)
 
- # List Navigation
-* **[Rendering](https://github.com/RobloxFastFlags/FastFlags-Collective/tree/main?tab=readme-ov-file#rendering)**
-* **[Graphical](https://github.com/RobloxFastFlags/FastFlags-Collective/tree/main?tab=readme-ov-file#graphical-settings)**
-* **[UI](https://github.com/RobloxFastFlags/FastFlags-Collective/tree/main?tab=readme-ov-file#user-interface)**
-* **[Textures](https://github.com/RobloxFastFlags/FastFlags-Collective/tree/main?tab=readme-ov-file#textures)**
-* **[Physics](https://github.com/RobloxFastFlags/FastFlags-Collective/tree/main?tab=readme-ov-file#physics)**
-* **[Other FFlags](https://github.com/RobloxFastFlags/FastFlags-Collective/tree/main?tab=readme-ov-file#other-fflags)**
-* **[Links](https://github.com/RobloxFastFlags/FastFlags-Collective/tree/main?tab=readme-ov-file#links)**
-* **[FastFlag Community Server](https://discord.gg/YreqZ7aYmg)**
 
 <img src="assets/bitdancer.png" width="888"/>
 
 <h3 align="center">══════⊹⊱≼≽⊰⊹══════</h3>
+
+<h1 align="center">TESTING</h1>
+
+### Semi Fullbright
+```json
+{
+    "FFlagFastGPULightCulling3": "True",
+    "FIntRenderShadowIntensity": "0",
+    "DFIntCullFactorPixelThresholdShadowMapHighQuality ": "2147483647",
+    "DFIntCullFactorPixelThresholdShadowMapLowQuality": "2147483647",
+    "FFlagNewLightAttenuation": "True",
+    "FIntRenderShadowmapBias": "-1",
+    "DFFlagDebugPauseVoxelizer": "True"
+}
+```
+
+### Semi Fullbright 2
+##### soon or maybe never
 
 <h1 align="center">Rendering API</h1>
 
@@ -150,6 +167,13 @@
     "FIntRenderShadowIntensity": "0"
 }
 ```
+### Disable Shadows
+```json
+{
+    "DFIntCullFactorPixelThresholdShadowMapHighQuality": "2147483647",
+    "DFIntCullFactorPixelThresholdShadowMapLowQuality": "2147483647"
+}
+```
 ### Preserve rendering quality with display setting
 ```json
 {
@@ -220,7 +244,7 @@ High
 }
 ```
 ### Makes avatars shiny 
-###### [everything goes black on <3] ***[DFIntDebugFRMQualityLevelOverride is there to set your graphics to 10, You can change it to anything above 3: [Click here to view](https://github.com/RobloxFastFlags/FastFlags-Collective/tree/main?tab=readme-ov-file#frm-levels) ]***
+###### [everything goes black on <3] ***[DFIntDebugFRMQualityLevelOverride is there to set your graphics to 10, You can change it to anything above 3
 ```json
 {
     "DFIntRenderClampRoughnessMax": "-640000000",
@@ -272,6 +296,12 @@ High
 ```json
 {
     "FFlagFastGPULightCulling3": "True"
+}
+```
+### Enable CPULightCulling
+```json
+{
+    "FFlagDebugForceFSMCPULightCulling": "True"
 }
 ```
 ### Frame Buffer
@@ -365,6 +395,12 @@ High
 
 <h1 align="center">User Interface</h1>
 
+### Favorite Item in-game
+```json
+{
+    "FFlagEnableFavoriteButtonForUgc": "True"
+}
+```
 ### Home Sidebar Text
 ```json
 {
@@ -380,7 +416,7 @@ High
 ### FPS Unlocker in Roblox Menu Settings
 ```json
 {
-    "FFlagGameBasicSettingsFramerateCap": "True",
+    "FFlagGameBasicSettingsFramerateCap4": "True",
     "DFIntTaskSchedulerTargetFps": "0"
 }
 ```
@@ -541,17 +577,17 @@ High
 ### Fix Textures
 ```json
 {
-      "FFlagMSRefactor5": "False"
+    "FFlagMSRefactor5": "False"
 }
 ```
 ### No Textures
 ```json
 {
-      "FStringPartTexturePackTable2022": "{\"glass\":{\"ids\":[\"rbxassetid://9873284556\",\"rbxassetid://9438453972\"],\"color\":[254,254,254,7]}}",
-      "FStringPartTexturePackTablePre2022": "{\"glass\":{\"ids\":[\"rbxassetid://7547304948\",\"rbxassetid://7546645118\"],\"color\":[254,254,254,7]}}",
-      "FStringTerrainMaterialTable2022": "",
-      "FStringTerrainMaterialTablePre2022": "",
-      "FFlagMSRefactor5": "False"
+    "FStringPartTexturePackTable2022": "{\"glass\":{\"ids\":[\"rbxassetid://9873284556\",\"rbxassetid://9438453972\"],\"color\":[254,254,254,7]}}",
+    "FStringPartTexturePackTablePre2022": "{\"glass\":{\"ids\":[\"rbxassetid://7547304948\",\"rbxassetid://7546645118\"],\"color\":[254,254,254,7]}}",
+    "FStringTerrainMaterialTable2022": "",
+    "FStringTerrainMaterialTablePre2022": "",
+    "FFlagMSRefactor5": "False"
 }
 ```
 ### Trollface Textures
@@ -721,17 +757,6 @@ High
     "FIntParallelDynamicPartsFastClusterBatchSize": "-1",
 }
 ```
-### Warp & Slowmotion
-```json
-{
-    "DFIntMaxMissedWorldStepsRemembered": "1"
-}
-```
-```json
-{
-    "DFIntMaxMissedWorldStepsRemembered": "1000"
-}
-```
 ### Noclip
 ###### Adjust the value so you don't fall through the ground
 ```json
@@ -755,6 +780,12 @@ High
 
 <h1 align="center">other fflags</h1>
 
+### New Camera Mode
+```json
+{
+    "FFlagNewCameraControls": "True"
+}
+```
 ### Disable In-game Advertisements
 ```json
 {
@@ -1020,6 +1051,12 @@ High
     "FStringDebugLuaLogPattern": "ExpChat/mountClientApp"
 }
 ```
+### Octree Validation
+```json
+{
+    "FFlagDebugEnableOctreeValidation": "True"
+}
+```
 ### Self Explanatory 1
 ```json
 {
@@ -1066,31 +1103,141 @@ High
 }
 ```
 
-<h1 align="center">Partnered Discord Servers</h1>
+<h1 align="center">Community Presets</h1>
 
-<h3 align="center">✅ Approved & ⚠ Caution</h3>
+### Improve Animation Speed, Visual Fidelity, and Ping
+##### @DrPlaguenstein
+```json
+{
+    "FFlagSimEnableDCD10": "True",
+    "FFlagDebugGraphicsPreferD3D11FL10": "True",
+    "DFIntBufferCompressionLevel": "0",
+    "DFIntBufferCompressionThreshold": "100",
+    "DFIntPerformanceControlFrameTimeMax": "1",
+    "DFIntPerformanceControlFrameTimeMaxUtility": "-1",
+    "FFlagPushFrameTimeToHarmony": "True",
+    "FFlagUISUseLastFrameTimeInUpdateInputSignal": "True",
+    "DFIntAnimatorThrottleMaxFramesToSkip": "1",
+    "DFIntNumFramesAllowedToBeAboveError": "1",
+    "DFIntVisibilityCheckRayCastLimitPerFrame": "10",
+    "DFIntNetworkSchemaCompressionRatio": "100",
+    "DFIntTimeBetweenSendConnectionAttemptsMS": "200"
+}
+```
 
-<h3 align="center"><img src="https://cdn.discordapp.com/icons/1021647263514247248/a_dd36ba0ae8c5b1a4450571daae64a545.gif" width="128"/> </h3>
+### Extreme Latency
+##### @DrPlaguenstein
+```json
+{
+    "DFIntLargePacketQueueSizeCutoffMB": "1000",
+    "DFIntMaxProcessPacketsJobScaling": "10000",
+    "DFIntMaxProcessPacketsStepsAccumulated": "0",
+    "DFIntMaxProcessPacketsStepsPerCyclic": "5000",
+    "DFIntMegaReplicatorNetworkQualityProcessorUnit": "10"
+}
+```
+### RCOOL
+```json
+{
+    "FFlagHandleAltEnterFullscreenManually": "False",
+    "FLogNetwork": "7",
+    "DFIntTaskSchedulerTargetFps": "9999",
+    "FFlagFixGraphicsQuality": "True",
+    "FFlagDebugDisableTelemetryEphemeralCounter": "True",
+    "FFlagDebugDisableTelemetryEphemeralStat": "True",
+    "FIntRenderLocalLightFadeInMs": "0",
+    "FFlagDebugDisableTelemetryEventIngest": "True",
+    "FFlagDebugDisableTelemetryPoint": "True",
+    "FFlagDebugDisableTelemetryV2Counter": "True",
+    "FFlagDebugDisableTelemetryV2Event": "True",
+    "FFlagDebugDisableTelemetryV2Stat": "True",
+    "FStringPartTexturePackTable2022": "{\u0022glass\u0022:{\u0022ids\u0022:[\u0022rbxassetid://9873284556\u0022,\u0022rbxassetid://9438453972\u0022],\u0022color\u0022:[254,254,254,7]}}",
+    "FStringPartTexturePackTablePre2022": "{\u0022glass\u0022:{\u0022ids\u0022:[\u0022rbxassetid://7547304948\u0022,\u0022rbxassetid://7546645118\u0022],\u0022color\u0022:[254,254,254,7]}}",
+    "FStringTerrainMaterialTable2022": "",
+    "FStringTerrainMaterialTablePre2022": "",
+    "FFlagGlobalWindActivated": "False",
+    "FFlagEnableBetaFacialAnimation2": "False",
+    "FFlagFacialAnimationSupport1": "False",
+    "DFIntAnimationLodFacsDistanceMin": "0",
+    "DFIntAnimationLodFacsDistanceMax": "0",
+    "DFIntAnimationLodFacsVisibilityDenominator": "0",
+    "DFFlagEnableDynamicHeadByDefault": "False",
+    "FIntRobloxGuiBlurIntensity": "0",
+    "FFlagDebugRenderingSetDeterministic": "True",
+    "DFIntCSGLevelOfDetailSwitchingDistance": "0",
+    "DFIntCSGLevelOfDetailSwitchingDistanceL12": "0",
+    "DFIntCSGLevelOfDetailSwitchingDistanceL23": "0",
+    "DFIntCSGLevelOfDetailSwitchingDistanceL34": "0",
+    "FIntRenderLocalLightUpdatesMax": "1",
+    "FIntRenderLocalLightUpdatesMin": "1",
+    "FFlagAdServiceEnabled": "False",
+    "FFlagFastGPULightCulling3": "True",
+    "FFlagNewLightAttenuation": "True",
+    "FFlagGlobalWindRendering": "False",
+    "FIntRenderShadowIntensity": "0",
+    "FIntRenderShadowmapBias": "1",
+    "FIntDebugForceMSAASamples": "-1",
+    "FIntFRMMinGrassDistance": "0",
+    "FFlagLuaAppUseUIBloxColorPalettes1": "True",
+    "FFlagEnableCommandAutocomplete": "True",
+    "FFlagUIBloxUseNewThemeColorPalettes": "True",
+    "FIntFRMMaxGrassDistance": "0",
+    "FFlagSoundsUsePhysicalVelocity": "True",
+    "FIntRenderGrassDetailStrands": "0",
+    "FFlagChromeBetaFeature": "False",
+    "FFlagEnableInGameMenuChromeABTest2": "False",
+    "FFlagEnableReportAbuseMenuRoactABTest2": "False",
+    "FFlagEnableChromePinnedChat": "False",
+    "FFlagEnableInGameMenuChrome": "False",
+    "FFlagEnableInGameMenuChromeABTest": "False",
+    "FFlagEnableInGameMenuChromeSignalAPI": "False",
+    "FFlagPlayerListChromePushdown": "False",
+    "FStringEnableChromePinnedChatForcedUserIds": "1",
+    "FStringGameMenuChromeForcedUserIds": "1",
+    "FFlagVoiceBetaBadge": "False",
+    "FFlagTopBarUseNewBadge": "False",
+    "FFlagEnableBetaBadgeLearnMore": "False",
+    "FFlagBetaBadgeLearnMoreLinkFormview": "False",
+    "FFlagControlBetaBadgeWithGuac": "False",
+    "FStringVoiceBetaBadgeLearnMoreLink": "null",
+    "FIntRenderGrassHeightScaler": "0",
+    "DFFlagDebugRenderForceTechnologyVoxel": "True",
+    "DFFlagDisableDPIScale": "True",
+    "DFIntTextureCompositorActiveJobs": "0",
+    "FFlagCoreGuiTypeSelfViewPresent": "False",
+    "DFIntDebugFRMQualityLevelOverride": "1",
+    "FFlagDisableNewIGMinDUA": "True",
+    "FFlagPreloadAllFonts": "True",
+    "FFlagCommitToGraphicsQualityFix": "True",
+    "FFlagDebugSkyGray": "True",
+    "DFIntMaxFrameBufferSize": "4",
+    "FFlagRenderGpuTextureCompressor": "True",
+    "FFlagGpuGeometryManager7": "True",
+    "DFFlagPredictedOOM": "False",
+    "DFIntPredictedOOMPercent": "0",
+    "FFlagDisablePostFx": "True",
+    "FFlagEnableQuickGameLaunch": "True",
+    "DFFlagDebugPauseVoxelizer": "True",
+    "FIntTerrainArraySliceSize": "4",
+    "DFFlagTextureQualityOverrideEnabled": "True",
+    "DFIntTextureQualityOverride": "1",
+    "FFlagEnableAudioOutputDevice": "False"
+}
+```
+### Network CPU RSS Tweaks
+##### @DrPlaguenstein
+```json
+{
+    "DFIntPhysicsReceiveNumParallelTasks": "20",
+    "DFIntPhysicsAnalyticsHighFrequencyIntervalSec": "20",
+    "FFlagSimAdaptiveMinorOptimizations": "True",
+    "FIntSimWorldTaskQueueParallelTasks": "20",
+    "FIntSmoothClusterTaskQueueMaxParallelTasks": "20",
+    "DFIntReplicationDataCacheNumParallelTasks": "20",
+    "DFIntMegaReplicatorNumParallelTasks": "20"
+}
+```
 
-<h3 align="center"><a href="https://discord.gg/YreqZ7aYmg">Our Discord Server ✅</a></h3>
-
-<h3 align="center">
-  <a href="https://discord.gg/YreqZ7aYmg">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/98/Discord_logo.svg" width="100" alt="Join server">
-  </a>
-</h3>
-
-<h5 align="center">Server above is Approved. You should join.</h5>
-
-<h3 align="center"><img src="https://cdn.discordapp.com/icons/1230111631627911199/7d9a147ddea0fe465956e0aa47eedb0d.webp" width="128"/> </h3>
-
-<h3 align="center"><a href="https://discord.gg/8vZQbGNt">Dr JR Fanclub ✅</a></h3>
-
-<h3 align="center">
-  <a href="https://discord.gg/8vZQbGNt">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/98/Discord_logo.svg" width="100" alt="Join server">
-  </a>
-</h3>
 
 <h1 align="center">Links</h1>
 
@@ -1105,20 +1252,8 @@ High
 
 <h4 align="center">‧⁺̣˚̣̣*̣̩⋆̩·̩̩୨˚̣̣̣̣͙୧·̩̩⋆̩*̣̩˚̣̣⁺̣‧ You've reached the bottom of the list! ‧⁺̣˚̣̣*̣̩⋆̩·̩̩୨˚̣̣̣̣͙୧·̩̩⋆̩*̣̩˚̣̣⁺̣‧୨</h4>
 
-# List Information
-* *Creation Date: 9:46 PM 08/25/2023*
 
-<h3 align="center"><img src="https://i.scdn.co/image/ab67616d0000b2739027ba239bc23cb8586cd6be" width="128"/> </h3>
-
-<h3 align="center"><a href="https://open.spotify.com/track/0i1bokCJ95evU1gb5HcXFy">Never Lose Me</a> - Flo Milli, SZA, Cardi B</h3>
-
-<h1 align="center">
-  <a href="https://open.spotify.com/track/0i1bokCJ95evU1gb5HcXFy">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" width="100" alt="Listen on Spotify">
-  </a>
-</h1>
-
-<h4 align="center">FastFlags 2024®<sup>eal</sup></h3>
+<h4 align="center">deantes' softworks<sup>eal</sup></h3>
 
 <p align="center"><a href="https://raw.githubusercontent.com/MaximumADHD/Roblox-Client-Tracker/roblox/FVariables.txt">FVariables.txt</a></p>
 
