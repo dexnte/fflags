@@ -12,7 +12,6 @@
 3. **Paste in the JSON.**
 4. **Save and your good to go!**
 
-<img src="/assets/tutorial.gif" width="750"/>
 
 
 ## Normal Roblox Bootstrapper How to Use:
@@ -29,11 +28,6 @@
 2. **Add a semicolon after the Value (`;`). Examples: `True;`, `1;`.**
 3. **Include a Place ID after the semicolon. Examples: `True;4483381587`, `1;4483381587`.**
 4. **Your configuration is complete!**
-
-[Watch a Video Tutorial](https://www.youtube.com/watch?v=5XjhPF5ydJM)
-
-[Watch a Video Tutorial](https://streamable.com/rk5an6)
-
 
 <img src="assets/bitdancer.png" width="888"/>
 
